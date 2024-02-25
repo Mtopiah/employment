@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const toggleButton = document.getElementById('toggleTheme');
+    const toggleButton = document.getElementById('checkbox');
     const bodyElement = document.body;
 
     // Check for saved theme in localStorage
