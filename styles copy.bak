@@ -50,33 +50,7 @@ input:checked + label:after {
     transform: translateX(-100%);
     background: linear-gradient(180deg,#777,#3a3a3a);
 }
-input:checked + label + .background {
-    background: #242424;
-}
-label svg {
-    position: absolute;
-    width: 15px;
-    height: 15px;
-    z-index: 100;
-}
-label svg.moon {
-    left: 57px;
-    height: 25px;
-    fill: #fff;
-    transition: 0.3s;
-}
-label svg.sun {
-    left: 6px;
-    height: 25px;
-    fill: #7e7e7e;
-    transition: 0.3s;
-}
-input:checked + label svg.sun {
-    fill: #7e7e7e;
-}
-input:checked + label svg.moon {
-    fill: #fff;
-}
+
 
 header {
     background: #333;
@@ -130,3 +104,28 @@ footer {
 .footer p {
     margin: 10x 0; /* Spacing between paragraphs */
 }
+
+/* Adjusting child elements inside header and footer, if necessary */
+header h1, footer p {
+    margin: 0; /* Removes margin from the top and bottom */
+}
+
+:root {
+    --background-color-light: #f0f0f0; /* Light mode background */
+    --text-color-light: #333; /* Dark grey for light mode text */
+
+    --background-color-dark: #333; /* Dark mode background */
+    --text-color-dark: #f0f0f0; /* Light text for dark mode */
+}
+
+body.light-mode {
+    background-color: var(--background-color-light);
+    color: var(--text-color-light);
+}
+
+body.dark-mode {
+    background-color: var(--background-color-dark);
+    color: var(--text-color-dark);
+}
+
+
